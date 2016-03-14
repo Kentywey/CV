@@ -20,8 +20,62 @@
 <body>
   
     <div class="row">
-      <img src="img/banniere.jpg">  
-      <canvas witdh ="100vh" height="100vh"></canvas>
+<div id="simulation_graphique">
+    <div id="simulation_menu_AV">
+        <!--<?php include("../include/simulation/menu_AV.php"); ?>-->
+        <img src="img/banniere.jpg">  
+    </div>
+ 
+    <div id="simulation_zone_graphique">
+        <canvas id="canvas" width="300px" height="500px">
+             <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas>
+    </div>
+
+
+
+<script>
+            function affichage() {
+    canvas  = document.getElementById('canvas');
+    canvas.width = 800;
+    canvas.style.backgroundColor="red";
+    context = canvas.getContext('2d');
+ 
+    window.addEventListener('resize', resizeCanvas, false);
+ 
+     
+    function resizeCanvas() {alert("ok");
+            var largeur_contenant = document.getElementById('simulation_graphique').offsetWidth;
+            largeur_contenu = largeur_contenant-270;
+             
+                        canvas.width = largeur_contenu;
+                        canvas.style.backgroundColor="red";
+             
+            creation_graphique();
+     
+             
+    }
+ 
+    resizeCanvas();
+     
+}
+
+window.onload = affichage;
+    </script>
+</head>
+<body>
+    <div id="simulation_graphique">
+    <div id="simulation_menu_AV">
+        <!--<?php include("../include/simulation/menu_AV.php"); ?>-->
+    </div>
+ 
+    <div id="simulation_zone_graphique">
+        <canvas id="canvas"  height="500">
+             <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas>
+    </div>
+</div>
+
     </div>
     <div class="container">
     <div class="row">
