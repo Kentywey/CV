@@ -31,3 +31,39 @@ function creation_graphique() {
             context.fillStyle = "gold";
             context.fillRect(canvas.width-9, 0, 9, 80);
 }
+
+function submitForm(){
+    // Initiate Variables With Form Content
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+ 
+    $.ajax({
+        type: "POST",
+        url: "php/form-process.php",
+        data: "name=" + name + "&email=" + email + "&message=" + message,
+        success : function(text){
+            if (text == "success"){
+                formSuccess();
+            }
+        }
+    });
+}
+function formSuccess(){
+    $( "#msgSubmit" ).removeClass( "hidden" );
+}
+
+if (!$_POST['name']) {
+    $errName = 'Please enter your name';
+}
+
+
+if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    $errEmail = 'Please enter a valid email address';
+}
+
+
+
+if ($human !== 5) {
+    $errHuman = 'Your anti-spam is incorrect';
+}
