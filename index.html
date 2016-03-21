@@ -22,75 +22,14 @@
     <div class="row">
 <div id="simulation_graphique">
     <div id="simulation_menu_AV">
-        <img src="img/banniere.jpg" class = "img-responsive">  
+        <img src="img/banniere.jpg" class = "img-responsive" style="width:100%; height:100%">  
     </div>
  
-    <div id="simulation_zone_graphique">
-        <canvas id="canvas" width="300px" height="500px">
-             <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
-        </canvas>
-    </div>
-
-
-
-<script>
-            function affichage() {
-    canvas  = document.getElementById('canvas');
-    canvas.width = 800;
-    canvas.style.backgroundColor="red";
-    context = canvas.getContext('2d');
- 
-    window.addEventListener('resize', resizeCanvas, false);
- 
-     
-    function resizeCanvas() {
-            var largeur_contenant = document.getElementById('simulation_graphique').offsetWidth;
-            largeur_contenu = largeur_contenant-270;
-             
-                        canvas.width = largeur_contenu;
-                        canvas.style.backgroundColor="red";
-             
-            creation_graphique();
-     
-             
-    }
- 
-    resizeCanvas();
-     
-}
-
-window.onload = affichage;
-
-
-$("#contactForm").validator().on("submit", function (event) {
-    if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-    } else {
-        // everything looks good!
-        event.preventDefault();
-        submitForm();
-    }
-});
-
-    </script>
-</head>
-<body>
-    <div id="simulation_graphique">
-    <div id="simulation_menu_AV">
-        <!--<?php include("../include/simulation/menu_AV.php"); ?>-->
-    </div>
- 
-    <div id="simulation_zone_graphique">
-        <canvas id="canvas"  height="500">
-             <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
-        </canvas>
-    </div>
-</div>
 
     </div>
     <div class="container">
     <div class="row">
-     <div id="presentation" class="col-md-offset-4">
+     <div  class="presentation col-md-offset-4">
       <h1 ><strong> Weymeesch Kenty </strong> </br> </h1>
       <h1 ><strong> Mon CV en ligne </strong></h1>
       <img src="img\lolke.png">
@@ -101,7 +40,7 @@ $("#contactForm").validator().on("submit", function (event) {
 
 	<div class ="container">
 		<div class="row">
-			<div id="formation" class="col-md-6 col-xs-6 col-sm-3">
+			<div  class=" formation col-md-6 col-xs-6 col-sm-3">
 				<h2> Ma Formation</h2>
        <h3 class ="body/h3">2015-2016 </h3>
        <p>DUT Informatique 2ème année IUT du Littoral Côte d'Opale, Calais Apprentissage Système/Réseaux, Alcatel-Lucent </p>
@@ -113,7 +52,7 @@ $("#contactForm").validator().on("submit", function (event) {
        <p>Baccalauréat Scientifique, spécialité physique/chimie, sports études Sophie Berthelot, Calais </p>
      </div>
 
-     <div id="competences" class="col-md-6 col-xs-6 col-sm-3">
+     <div  class=" competences col-md-6 col-xs-6 col-sm-3">
        <h2>Mes compétences</h2>
        <strong>Informatique </strong>
        <p>Bonne maîtrise du SQL, PL/PGSQL ( modélisation d'un jeux Pokémon, gestion d’un hôtel  ) </p>
@@ -140,7 +79,7 @@ $("#contactForm").validator().on("submit", function (event) {
 
 
  <div class="row">
-  <div id="competences" class="col-md-6 col-xs-6 col-sm-3">
+  <div class="competences col-md-6 col-xs-6 col-sm-3">
     <h2>Mes centres d'intêrets</h2>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -172,6 +111,10 @@ $("#contactForm").validator().on("submit", function (event) {
 
   </div>
 </div>
+<button type="button" class="btn btn-success col-md-offset-2">
+  <a href="mailto:kweymeesch@gmail.com" style="color:white">Contactez moi</a>
+</button>
+
 </div>
 
 </div>
