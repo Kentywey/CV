@@ -1,0 +1,62 @@
+body{
+	background-color: #CCC;
+}
+
+.banner-img {
+	background-image:  url('img/banniere.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.presentation{
+	padding-top:350px;
+}
+
+.personnel li{
+	font-size: 22px;
+	padding: 12px ;
+	border-bottom: 1px solid #e1e1e1;
+	color: #252525;
+	list-style-type:none;
+}
+
+.formation{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border:5px solid #e1e1e1;
+}
+
+.competences{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border:5px solid #e1e1e1;
+}
+
+.image{
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+}
+
+.centres{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border:5px solid #e1e1e1;
+}
+
+.centres .borduretab {
+	border:5px solid #e1e1e1;
+	margin: 20px;
+}
+
+.centres .contenutab{
+	margin: 20px;
+}
+
+.contact{	
+	margin: 20px;
+}
